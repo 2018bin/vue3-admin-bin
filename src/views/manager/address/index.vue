@@ -4,7 +4,7 @@
     <a-card class="general-card" :title="$t('menu.list.searchTable')">
       <a-row>
         <a-col :flex="1">
-          <FormList :formList="[]"  :formData="formModel"/>
+          <!-- <FormList :formList="[]"  :formData="formModel"/> -->
           <a-form
             :model="formModel"
             :label-col-props="{ span: 6 }"
@@ -255,7 +255,7 @@
   import type { TableColumnData } from '@arco-design/web-vue/es/table/interface';
   import cloneDeep from 'lodash/cloneDeep';
   import Sortable from 'sortablejs';
-  import FormList from '@/components/FormList.vue'
+  // import FormList from '@/components/FormList.vue'
 
   type SizeProps = 'mini' | 'small' | 'medium' | 'large';
   type Column = TableColumnData & { checked?: true };
