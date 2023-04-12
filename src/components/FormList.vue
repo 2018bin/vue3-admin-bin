@@ -253,7 +253,7 @@
   });
   const { config, formData, showAllForm } = toRefs(props);
   const toggleFlag = ref(true);
-  const spliceFormlist :any[]= computed(() => {
+  const spliceFormlist :any= computed(() => {
     if (showAllForm.value || toggleFlag.value) {
       return props.formList;
     }
