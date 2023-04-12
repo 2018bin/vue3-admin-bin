@@ -205,7 +205,7 @@
   </div>
 </template>
 
-<script  setup>
+<script lang="ts" setup>
   import {
     computed,
     onMounted,
@@ -253,7 +253,7 @@
   });
   const { config, formData, showAllForm } = toRefs(props);
   const toggleFlag = ref(true);
-  const spliceFormlist = computed(() => {
+  const spliceFormlist :any[]= computed(() => {
     if (showAllForm.value || toggleFlag.value) {
       return props.formList;
     }
@@ -266,7 +266,7 @@
     toggleFlag.value = !toggleFlag.value;
   };
 
-  const Emit = (name, itemObj, val) => {
+  const Emit = (name:string, itemObj:any, val:any) => {
     if (!name) return;
 
     const obj = {
@@ -281,7 +281,7 @@
   // 校验
   const validate = async () => {
     // eslint-disable-next-line no-return-await
-    return await formRef.value.validate().then((e) => {
+    return await formRef.value.validate().then((e:any) => {
       if (e) {
         return Promise.reject(e);
       }
