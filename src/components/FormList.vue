@@ -13,7 +13,7 @@
       <a-row :gutter="showAllForm ? 0 : 20">
         <a-col :span="showAllForm ? 24 : 23">
           <a-row :gutter="36">
-            <transition-group mode="out-in">
+            <TransitionGroup>
               <a-col
                 v-for="item of spliceFormlist"
                 :key="item.value"
@@ -192,7 +192,7 @@
                   <slot :name="item.value" :item="item" :form-data="formData" />
                 </template>
               </a-col>
-            </transition-group>
+            </TransitionGroup>
           </a-row>
         </a-col>
         <a-col v-if="!showAllForm" :span="1">
